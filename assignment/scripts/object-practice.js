@@ -12,7 +12,7 @@ const me = {
   firstName: 'Ben',
   lastName: 'Pedrick',
   hasSiblings: true,
-  showCount: 7,
+  shoeCount: 7,
   favThreeFoods: ['potato','tomato','rudabega']
   // TODO - add properties here
 };
@@ -24,7 +24,8 @@ console.log('A little about me:', me);
     created above to set its value.
   - Console.log fullName
 */
-
+let fullName = me.firstName + " " + me.lastName;
+console.log('My name is',fullName);
 
 
 /* 3. Nested arrays
@@ -32,6 +33,7 @@ console.log('A little about me:', me);
   - Console.log your last favorite food
 */
 
+console.log(me.favThreeFoods[0], me.favThreeFoods[me.favThreeFoods.length-1]);
 
 
 /* 4. Change a property of an existing object.
@@ -41,6 +43,10 @@ console.log('A little about me:', me);
   - Console.log your updated shoe count.
 */
 
+console.log('I currently have this many shoes: ',me.shoeCount);
+me.shoeCount += 1;
+console.log('I now have this many shoes! ',me.shoeCount);
+
 
 /* 5. Add a new property to an existing object.
   - Add a 'favoriteColor' to your existing object
@@ -48,3 +54,6 @@ console.log('A little about me:', me);
   - Cool huh? It works, even though it wasn't there before
   - Console.log your object
 */
+
+me.favoriteColor = 'blue';
+console.log(me);
